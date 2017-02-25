@@ -1,0 +1,2 @@
+cf push
+cf apps

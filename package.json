@@ -1,0 +1,26 @@
+{
+  "name": "get-started-node",
+  "main": "server.js",
+  "description": "An introduction to developing Node.js apps on the Bluemix platform",
+  "version": "0.1.1",
+  "private": false,
+  "engines": {
+    "node": "4.*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IBM-Bluemix/get-started-node"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "cfenv": "^1.0.x",
+    "cloudant": "^1.7.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1"
+  },
+  "author": "IBM Corp",
+  "license": "Apache-2.0"
+}
