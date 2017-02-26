@@ -1,18 +1,25 @@
-.navbar.navbar-default.navbar-fixed-top
+nav.navbar.navbar-fixed-top
   .container
     .navbar-header
-      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navigation-index')
         span.sr-only Toggle navigation
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/')
-        i.fa.fa-bolt
-        | Wow Panic
-    .collapse.navbar-collapse
+      a(href='/')
+        .logo-container
+          .logo(style='color: white; height: 45px; border:0; display: flex; justify-content: center; align-items: center; font-size: 3rem;')
+            i.fa.fa-bolt
+          .brand Wow Panic
+    #navigation-index.collapse.navbar-collapse
       ul.nav.navbar-nav
         li(class=(title == 'Home') ? 'active' : undefined)
           a(href='/') Home
+        li(class=(title == 'Recent Logs') ? 'active' : undefined)
+          a(href='/recent-logs') Recent Logs
+        if user
+          li(class=(title == 'Add Log') ? 'active' : undefined)
+            a(href='/add-log') Add Log
         li(class=(title == 'Contact') ? 'active' : undefined)
           a(href='/contact') Contact
       ul.nav.navbar-nav.navbar-right
@@ -25,9 +32,7 @@
           li.dropdown(class=(title == 'Account Management') ? 'active' : undefined)
             a.dropdown-toggle(href='#', data-toggle='dropdown')
               if user.profile.picture
-                img(src=user.profile.picture)
-              else
-                img(src=user.gravatar(60))
+                img(src=user.profile.picture, height="20px", style="margin-right: 10px")
               span= user.profile.name || user.email || user.id
               i.caret
             ul.dropdown-menu

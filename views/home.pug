@@ -1,27 +1,35 @@
 extends layout
 
 block content
-  h1 Wow Panic
-  p.lead It wows your panic.
-  hr
-  .row
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
+  .section.section-basic
+    .container
+      .row(style="margin-top: 60px;")
+        .col-sm-6.col-xs-12
+          .title(style="margin-top: 0")
+            h2(style="margin-top: 0") Don't Let Others Limit You
+
+          p(style="font-size: 1.7rem; margin-bottom: 0; line-height: 3rem;").
+            Catcalls, sexually explicit comments, sexist remarks, stalking, flashing, and assault. Most women and some men will face gender-based street harassment by strangers in their life. #[b Don't let other people limit your mobility and access to public spaces].
+
+        .col-sm-6.col-xs-12
+          img.img-responsive(src="http://www.stopstreetharassment.org/wp-content/uploads/2015/10/SH-Website-feature-English.jpg")
+
+      .row(style="margin-top: 120px;")
+        .col-sm-6.col-xs-12
+          img.img-responsive(src="http://www.stopstreetharassment.org/wp-content/uploads/2015/10/Anti-SHweekwrapup2016.jpg")
+
+        .col-sm-6.col-xs-12
+          .title(style="margin-top: 0")
+            h2(style="margin-top: 0") Unify Against Street Harassment
+
+          p(style="font-size: 1.7rem; margin-bottom: 0; line-height: 3rem;").
+            Report the harassment immediately when it occurs. Send automated text messages to your friend and family, and even call the police #[b with the click of a button].
+
+      hr(style="margin: 75px 0")
+
+      .title.text-center(style="margin-top:0; margin-bottom: 20px")
+        h2(style="margin-top:0") Danger Map
+        p(style="margin-bottom:0").
+          Here is the danger map of your neighborhood. Be very careful you're in the middle of a red-colored area!
+
+      #map(style='height: 400px')

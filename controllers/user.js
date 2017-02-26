@@ -29,22 +29,22 @@ exports.postLogin = (req, res, next) => {
   var errors = req.validationErrors();
 
   if (errors) {
-    
+
     return res.redirect('/login');
   }
 
-  passport.authenticate('local', (err, user, info) => {
+  User.findOne({ email: req.body.email, password: req.body.password }, (err, existingUser) => {
     if (err) { return next(err); }
-    if (!user) {
-      
+    if (existingUser) {
+      req.logIn(existingUser, (err) => {
+        if (err) { return next(err); }
+
+        res.redirect(req.session.returnTo || '/');
+      });
+    } else {
       return res.redirect('/login');
     }
-    req.logIn(user, (err) => {
-      if (err) { return next(err); }
-      
-      res.redirect(req.session.returnTo || '/');
-    });
-  })(req, res, next);
+  });
 };
 
 /**
@@ -82,31 +82,27 @@ exports.postSignup = (req, res, next) => {
   var errors = req.validationErrors();
 
   if (errors) {
-    
+    console.log("Error.", errors);
     return res.redirect('/signup');
   }
+  console.log("No errors.");
 
   var user = new User({
     email: req.body.email,
     password: req.body.password
   });
 
-  User.findOne({ email: req.body.email }, (err, existingUser) => {
-    if (err) { return next(err); }
-    if (existingUser) {
-      
-      return res.redirect('/signup');
-    }
-    user.save((err) => {
+  user.save((err) => {
       if (err) { return next(err); }
+      console.log("User saved without error.");
       req.logIn(user, (err) => {
         if (err) {
           return next(err);
         }
+        console.log("Login successful.");
         res.redirect('/');
       });
     });
-  });
 };
 
 /**
@@ -130,7 +126,7 @@ exports.postUpdateProfile = (req, res, next) => {
   var errors = req.validationErrors();
 
   if (errors) {
-    
+
     return res.redirect('/account');
   }
 
@@ -144,12 +140,12 @@ exports.postUpdateProfile = (req, res, next) => {
     user.save((err) => {
       if (err) {
         if (err.code === 11000) {
-          
+
           return res.redirect('/account');
         }
         return next(err);
       }
-      
+
       res.redirect('/account');
     });
   });
@@ -166,7 +162,7 @@ exports.postUpdatePassword = (req, res, next) => {
   var errors = req.validationErrors();
 
   if (errors) {
-    
+
     return res.redirect('/account');
   }
 
@@ -175,7 +171,7 @@ exports.postUpdatePassword = (req, res, next) => {
     user.password = req.body.password;
     user.save((err) => {
       if (err) { return next(err); }
-      
+
       res.redirect('/account');
     });
   });
@@ -189,7 +185,7 @@ exports.postDeleteAccount = (req, res, next) => {
   User.remove({ _id: req.user.id }, (err) => {
     if (err) { return next(err); }
     req.logout();
-    
+
     res.redirect('/');
   });
 };
@@ -206,7 +202,7 @@ exports.getOauthUnlink = (req, res, next) => {
     user.tokens = user.tokens.filter(token => token.kind !== provider);
     user.save((err) => {
       if (err) { return next(err); }
-      
+
       res.redirect('/account');
     });
   });
@@ -226,7 +222,7 @@ exports.getReset = (req, res, next) => {
     .exec((err, user) => {
       if (err) { return next(err); }
       if (!user) {
-        
+
         return res.redirect('/forgot');
       }
       res.render('account/reset', {
@@ -246,7 +242,7 @@ exports.postReset = (req, res, next) => {
   var errors = req.validationErrors();
 
   if (errors) {
-    
+
     return res.redirect('back');
   }
 
@@ -258,7 +254,7 @@ exports.postReset = (req, res, next) => {
         .exec((err, user) => {
           if (err) { return next(err); }
           if (!user) {
-            
+
             return res.redirect('back');
           }
           user.password = req.body.password;
@@ -287,7 +283,7 @@ exports.postReset = (req, res, next) => {
         text: `Hello,\n\nThis is a confirmation that the password for your account ${user.email} has just been changed.\n`
       };
       transporter.sendMail(mailOptions, (err) => {
-        
+
         done(err);
       });
     }
@@ -321,7 +317,7 @@ exports.postForgot = (req, res, next) => {
   var errors = req.validationErrors();
 
   if (errors) {
-    
+
     return res.redirect('/forgot');
   }
 
@@ -336,7 +332,7 @@ exports.postForgot = (req, res, next) => {
       User.findOne({ email: req.body.email }, (err, user) => {
         if (err) { return done(err); }
         if (!user) {
-          
+
           return res.redirect('/forgot');
         }
         user.passwordResetToken = token;
@@ -364,7 +360,7 @@ exports.postForgot = (req, res, next) => {
           If you did not request this, please ignore this email and your password will remain unchanged.\n`
       };
       transporter.sendMail(mailOptions, (err) => {
-        
+
         done(err);
       });
     }

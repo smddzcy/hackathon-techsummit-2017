@@ -1,0 +1,951 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='apple-touch-icon', sizes='76x76', href='img/apple-icon.png')
+    link(rel='icon', type='image/png', href='img/favicon.png')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title Material Kit by Creative Tim
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css')
+    link(href='assets/css/bootstrap.min.css', rel='stylesheet')
+    link(href='assets/css/material-kit.css', rel='stylesheet')
+    link(href='assets/css/demo.css', rel='stylesheet')
+  body.index-page
+    nav.navbar.navbar-transparent.navbar-fixed-top.navbar-color-on-scroll
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navigation-index')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a(href='http://www.creative-tim.com')
+            .logo-container
+              .logo
+                img(src='img/logo.png', alt='Creative Tim Logo', rel='tooltip', title='<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>', data-placement='bottom', data-html='true')
+              .brand  Creative Tim
+        #navigation-index.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='components-documentation.html', target='_blank')
+                i.material-icons dashboard
+                |  Components
+            li
+              a(href='http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie', target='_blank')
+                i.material-icons unarchive
+                |  Upgrade to PRO
+            li
+              a.btn.btn-white.btn-simple.btn-just-icon(rel='tooltip', title='Follow us on Twitter', data-placement='bottom', href='https://twitter.com/CreativeTim', target='_blank')
+                i.fa.fa-twitter
+            li
+              a.btn.btn-white.btn-simple.btn-just-icon(rel='tooltip', title='Like us on Facebook', data-placement='bottom', href='https://www.facebook.com/CreativeTim', target='_blank')
+                i.fa.fa-facebook-square
+            li
+              a.btn.btn-white.btn-simple.btn-just-icon(rel='tooltip', title='Follow us on Instagram', data-placement='bottom', href='https://www.instagram.com/CreativeTimOfficial', target='_blank')
+                i.fa.fa-instagram
+    .wrapper
+      .header.header-filter(style="background-image: url('img/bg2.jpeg');")
+        .container
+          .row
+            .col-md-8.col-md-offset-2
+              .brand
+                h1 Material Kit.
+                h3 A Badass Bootstrap UI Kit based on Material Design.
+      .main.main-raised
+        .section.section-basic
+          .container
+            .title
+              h2 Basic Elements
+            #buttons
+              .title
+                h3
+                  | Buttons
+                  br
+                  |
+                  small Pick your style
+              .row
+                .col-md-8.col-md-offset-2
+                  button.btn.btn-primary Default
+                  |
+                  button.btn.btn-primary.btn-round Round
+                  |
+                  button.btn.btn-primary.btn-round
+                    i.material-icons favorite
+                    |  With Icon
+                  |
+                  button.btn.btn-primary.btn-fab.btn-fab-mini.btn-round
+                    i.material-icons favorite
+                  |
+                  button.btn.btn-primary.btn-simple Simple
+              .title
+                h3
+                  small Pick your size
+              .row
+                .col-md-8.col-md-offset-2
+                  button.btn.btn-primary.btn-xs x-Small
+                  |
+                  button.btn.btn-primary.btn-sm Small
+                  |
+                  button.btn.btn-primary Regular
+                  |
+                  button.btn.btn-primary.btn-lg Large
+              .title
+                h3
+                  small Pick your color
+              .row
+                .col-md-8.col-md-offset-2
+                  button.btn Default
+                  |
+                  button.btn.btn-primary Primary
+                  |
+                  button.btn.btn-info Info
+                  |
+                  button.btn.btn-success Success
+                  |
+                  button.btn.btn-warning Warning
+                  |
+                  button.btn.btn-danger Danger
+              .title
+                h3 Links
+              .row
+                .col-md-8.col-md-offset-2
+                  button.btn.btn-simple Default
+                  |
+                  button.btn.btn-simple.btn-primary Primary
+                  |
+                  button.btn.btn-simple.btn-info Info
+                  |
+                  button.btn.btn-simple.btn-success Success
+                  |
+                  button.btn.btn-simple.btn-warning Warning
+                  |
+                  button.btn.btn-simple.btn-danger Danger
+            #inputs
+              .title
+                h3 Inputs
+              .row
+                .col-sm-3
+                  .form-group
+                    input.form-control(type='text', value='', placeholder='Regular')
+                .col-sm-3
+                  .form-group.label-floating
+                    label.control-label With Floating Label
+                    |
+                    input.form-control(type='email')
+                .col-sm-3
+                  .form-group.label-floating.has-success
+                    label.control-label Success input
+                    |
+                    input.form-control(type='text', value='Success')
+                    |
+                    span.form-control-feedback
+                      i.material-icons done
+                .col-sm-3
+                  .form-group.label-floating.has-error
+                    label.control-label Error input
+                    |
+                    input.form-control(type='email', value='Error Input')
+                    |
+                    span.material-icons.form-control-feedback clear
+                .col-sm-3
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons group
+                    |
+                    input.form-control(type='text', placeholder='With Material Icons')
+                .col-sm-3
+                  .input-group
+                    span.input-group-addon
+                      i.fa.fa-group
+                    |
+                    input.form-control(type='text', placeholder='With Font Awesome Icons')
+            .space-70
+            #checkRadios
+              .row
+                .col-sm-3
+                  .title
+                    h3 Checkboxes
+                  .checkbox
+                    label
+                      input(type='checkbox', name='optionsCheckboxes')
+                      |  Unchecked
+                  .checkbox
+                    label
+                      input(type='checkbox', name='optionsCheckboxes', checked='')
+                      |  Checked
+                  .checkbox
+                    label
+                      input(type='checkbox', name='optionsCheckboxes', disabled='')
+                      |  Disabled Unchecked
+                  .checkbox
+                    label
+                      input(type='checkbox', name='optionsCheckboxes', disabled='', checked='')
+                      |  Disabled Checked
+                .col-sm-3
+                  .title
+                    h3 Radio Buttons
+                  .radio
+                    label
+                      input(type='radio', name='optionsRadios')
+                      |  Radio is off
+                  .radio
+                    label
+                      input(type='radio', name='optionsRadios', checked='true')
+                      |  Radio is on
+                  .radio
+                    label
+                      input(type='radio', name='optionsRadiosDisabled', disabled='')
+                      |  Disabled Radio is off
+                  .radio
+                    label
+                      input(type='radio', name='optionsRadiosDisabled', checked='true', disabled='')
+                      |  Disabled Radio is on
+                .col-sm-3
+                  .title
+                    h3 Toggle Buttons
+                  .togglebutton
+                    label
+                      input(type='checkbox', checked='')
+                      |  Toggle is on
+                  .togglebutton
+                    label
+                      input(type='checkbox')
+                      |  Toggle is off
+                .col-sm-3
+                  .title
+                    h3 Sliders
+                  #sliderRegular.slider
+                  #sliderDouble.slider.slider-info
+        .section.section-navbars
+          #menu-dropdown.container
+            .row
+              .col-md-6
+                .title
+                  h3 Menu
+                nav.navbar.navbar-default
+                  .container-fluid
+                    .navbar-header
+                      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                      |
+                      a.navbar-brand(href='#') Menu
+                    #example-navbar.collapse.navbar-collapse
+                      ul.nav.navbar-nav
+                        li.active
+                          a(href='#') Link
+                        li
+                          a(href='#') Link
+                        li.dropdown
+                          a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            | Dropdown
+                            b.caret
+                          ul.dropdown-menu.dropdown-menu-right
+                            li.dropdown-header Dropdown header
+                            li
+                              a(href='#') Action
+                            li
+                              a(href='#') Another action
+                            li
+                              a(href='#') Something else here
+                            li.divider
+                            li
+                              a(href='#') Separated link
+                            li.divider
+                            li
+                              a(href='#') One more separated link
+              .col-md-6
+                .title
+                  h3 Menu with Icons
+                nav.navbar.navbar-info
+                  .container-fluid
+                    .navbar-header
+                      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-icons')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                      |
+                      a.navbar-brand(href='#') Icons
+                    #example-navbar-icons.collapse.navbar-collapse
+                      ul.nav.navbar-nav.navbar-right
+                        li
+                          a(href='#pablo')
+                            i.material-icons email
+                        li
+                          a(href='#pablo')
+                            i.material-icons face
+                        li.dropdown
+                          a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            i.material-icons settings
+                            b.caret
+                          ul.dropdown-menu.dropdown-menu-right
+                            li.dropdown-header Dropdown header
+                            li
+                              a(href='#') Action
+                            li
+                              a(href='#') Another action
+                            li
+                              a(href='#') Something else here
+                            li.divider
+                            li
+                              a(href='#') Separated link
+                            li.divider
+                            li
+                              a(href='#') One more separated link
+            .title
+              h3 Navigation
+          #navbar
+            .navigation-example
+              nav.navbar.navbar-primary
+                .container
+                  .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-primary')
+                      span.sr-only Toggle navigation
+                      span.icon-bar
+                      span.icon-bar
+                      span.icon-bar
+                    |
+                    a.navbar-brand(href='#pablo') Primary Color
+                  #example-navbar-primary.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                      li.active
+                        a(href='#pablo')
+                          i.material-icons explore
+                          |  Discover
+                      li
+                        a(href='#pablo')
+                          i.material-icons account_circle
+                          |  Profile
+                      li
+                        a(href='#pablo')
+                          i.material-icons settings
+                          |  Settings
+              nav.navbar.navbar-info
+                .container
+                  .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-info')
+                      span.sr-only Toggle navigation
+                      span.icon-bar
+                      span.icon-bar
+                      span.icon-bar
+                    |
+                    a.navbar-brand(href='#pablo') Info Color
+                  #example-navbar-info.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                      li.active
+                        a(href='#pablo') Discover
+                      li
+                        a(href='#pablo') Profile
+                      li
+                        a(href='#pablo') Settings
+              nav.navbar.navbar-success
+                .container
+                  .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-success')
+                      span.sr-only Toggle navigation
+                      span.icon-bar
+                      span.icon-bar
+                      span.icon-bar
+                    |
+                    a.navbar-brand(href='#') Success Color
+                  #example-navbar-success.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                      li.active
+                        a(href='#pablo')
+                          i.material-icons explore
+                      li
+                        a(href='#pablo')
+                          i.material-icons account_circle
+                      li
+                        a(href='#pablo')
+                          i.material-icons settings
+              nav.navbar.navbar-warning
+                .container
+                  .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-warning')
+                      span.sr-only Toggle navigation
+                      span.icon-bar
+                      span.icon-bar
+                      span.icon-bar
+                    |
+                    a.navbar-brand(href='#pablo') Warning Color
+                  #example-navbar-warning.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-facebook-square
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-twitter
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-google-plus
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-instagram
+              nav.navbar.navbar-danger
+                .container
+                  .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-danger')
+                      span.sr-only Toggle navigation
+                      span.icon-bar
+                      span.icon-bar
+                      span.icon-bar
+                    |
+                    a.navbar-brand(href='#pablo') Danger Color
+                  #example-navbar-danger.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-facebook-square
+                          |  Share
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-twitter
+                          |  Tweet
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-pinterest
+                          |  Pin
+              nav.navbar.navbar-transparent
+                .container
+                  .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#example-navbar-transparent')
+                      span.sr-only Toggle navigation
+                      span.icon-bar
+                      span.icon-bar
+                      span.icon-bar
+                    |
+                    a.navbar-brand(href='#pablo') Transparent
+                  #example-navbar-transparent.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-facebook-square
+                          |  Facebook
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-twitter
+                          |  Twitter
+                      li
+                        a(href='#pablo')
+                          i.fa.fa-instagram
+                          |  Instagram
+        .section.section-tabs
+          .container
+            .row
+              .col-md-6
+                .title
+                  h3 Tabs with Icons on Card
+                .card.card-nav-tabs
+                  .header.header-success
+                    .nav-tabs-navigation
+                      .nav-tabs-wrapper
+                        ul.nav.nav-tabs(data-tabs='tabs')
+                          li.active
+                            a(href='#profile', data-toggle='tab')
+                              i.material-icons face
+                              |  Profile
+                          li
+                            a(href='#messages', data-toggle='tab')
+                              i.material-icons chat
+                              |  Messages
+                          li
+                            a(href='#settings', data-toggle='tab')
+                              i.material-icons build
+                              |  Settings
+                  .content
+                    .tab-content.text-center
+                      #profile.tab-pane.active
+                        p
+                          | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+                      #messages.tab-pane
+                        p
+                          | I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+                      #settings.tab-pane
+                        p
+                          | I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it&rsquo;s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.
+              .col-md-6
+                .title
+                  h3 Tabs on Plain Card
+                .card.card-nav-tabs.card-plain
+                  .header.header-danger
+                    .nav-tabs-navigation
+                      .nav-tabs-wrapper
+                        ul.nav.nav-tabs(data-tabs='tabs')
+                          li.active
+                            a(href='#home', data-toggle='tab') Home
+                          li
+                            a(href='#updates', data-toggle='tab') Updates
+                          li
+                            a(href='#history', data-toggle='tab') History
+                  .content
+                    .tab-content.text-center
+                      #home.tab-pane.active
+                        p
+                          | I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it&rsquo;s supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.
+                      #updates.tab-pane
+                        p
+                          | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+                      #history.tab-pane
+                        p
+                          | I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+        .section.section-pagination
+          .container
+            .row
+              .col-md-6
+                .title
+                  h3 Progress Bars
+                .progress.progress-line-primary
+                  .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 30%;')
+                    span.sr-only 60% Complete
+                .progress.progress-line-info
+                  .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%;')
+                    span.sr-only 60% Complete
+                .progress.progress-line-danger
+                  .progress-bar.progress-bar-success(style='width: 35%')
+                    span.sr-only 35% Complete (success)
+                  .progress-bar.progress-bar-warning(style='width: 20%')
+                    span.sr-only 20% Complete (warning)
+                  .progress-bar.progress-bar-danger(style='width: 10%')
+                    span.sr-only 10% Complete (danger)
+                br
+                .title
+                  h3 Navigation Pills
+                ul.nav.nav-pills(role='tablist')
+                  li
+                    a(href='#dashboard', role='tab', data-toggle='tab')
+                      i.material-icons dashboard
+                      |  Dashboard
+                  li.active
+                    a(href='#schedule', role='tab', data-toggle='tab')
+                      i.material-icons schedule
+                      |  Schedule
+                  li
+                    a(href='#tasks', role='tab', data-toggle='tab')
+                      i.material-icons list
+                      |  Tasks
+                  li
+                    a(href='#payments', role='tab', data-toggle='tab')
+                      i.material-icons attach_money
+                      |  Payments
+              .col-md-6
+                .title
+                  h3 Pagination
+                ul.pagination.pagination-primary
+                  li
+                    a(href='javascript:void(0);') 1
+                  li
+                    a(href='javascript:void(0);') ...
+                  li
+                    a(href='javascript:void(0);') 5
+                  li
+                    a(href='javascript:void(0);') 6
+                  li.active
+                    a(href='javascript:void(0);') 7
+                  li
+                    a(href='javascript:void(0);') 8
+                  li
+                    a(href='javascript:void(0);') 9
+                  li
+                    a(href='javascript:void(0);') ...
+                  li
+                    a(href='javascript:void(0);') 12
+                ul.pagination.pagination-info
+                  li
+                    a(href='javascript:void(0);')
+                  li
+                    a(href='javascript:void(0);') 1
+                  li
+                    a(href='javascript:void(0);') 2
+                  li.active
+                    a(href='javascript:void(0);') 3
+                  li
+                    a(href='javascript:void(0);') 4
+                  li
+                    a(href='javascript:void(0);') 5
+                  li
+                    a(href='javascript:void(0);') next &gt;
+                .title
+                  h3 Labels
+                |
+                span.label.label-default Default
+                |
+                span.label.label-primary Primary
+                |
+                span.label.label-info Info
+                |
+                span.label.label-success Success
+                |
+                span.label.label-warning Warning
+                |
+                span.label.label-danger Danger
+            .space
+            .title
+              h3 Notifications
+        #notifications.section.section-notifications
+          .alert.alert-info
+            .container-fluid
+              .alert-icon
+                i.material-icons info_outline
+              |
+              button.close(type='button', data-dismiss='alert', aria-label='Close')
+                span(aria-hidden='true')
+                  i.material-icons clear
+              |
+              b Info alert:
+              |  You&apos;ve got some friends nearby, stop looking at your phone and find them...
+          .alert.alert-success
+            .container-fluid
+              .alert-icon
+                i.material-icons check
+              |
+              button.close(type='button', data-dismiss='alert', aria-label='Close')
+                span(aria-hidden='true')
+                  i.material-icons clear
+              |
+              b Success Alert:
+              |  Yuhuuu! You&apos;ve got your $11.99 album from The Weeknd
+          .alert.alert-warning
+            .container-fluid
+              .alert-icon
+                i.material-icons warning
+              |
+              button.close(type='button', data-dismiss='alert', aria-label='Close')
+                span(aria-hidden='true')
+                  i.material-icons clear
+              |
+              b Warning Alert:
+              |  Hey, it looks like you still have the &quot;copyright &copy; 2015&quot; in your footer. Please update it!
+          .alert.alert-danger
+            .container-fluid
+              .alert-icon
+                i.material-icons error_outline
+              |
+              button.close(type='button', data-dismiss='alert', aria-label='Close')
+                span(aria-hidden='true')
+                  i.material-icons clear
+              |
+              b Error Alert:
+              |  Damn man! You screwed up the server this time. You should find a good excuse for your Boss...
+          .clearfix
+        .section
+          .container.tim-container
+            .title
+              h2 Typography
+            #typography
+              .row
+                .tim-typo
+                  h1
+                    span.tim-note Header 1
+                    | The Life of Material Kit
+                .tim-typo
+                  h2
+                    span.tim-note Header 2
+                    | The Life of Material Kit
+                .tim-typo
+                  h3
+                    span.tim-note Header 3
+                    | The Life of Material Kit
+                .tim-typo
+                  h4
+                    span.tim-note Header 4
+                    | The Life of Material Kit
+                .tim-typo
+                  h5
+                    span.tim-note Header 5
+                    | The Life of Material Kit
+                .tim-typo
+                  h6
+                    span.tim-note Header 6
+                    | The Life of Material Kit
+                .tim-typo
+                  p
+                    span.tim-note Paragraph
+                    |  I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+                .tim-typo
+                  span.tim-note Quote
+                  blockquote
+                    p
+                      | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that&rsquo;s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
+                    |
+                    small Kanye West, Musician
+                .tim-typo
+                  span.tim-note Muted Text
+                  p.text-muted
+                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                .tim-typo
+                  span.tim-note Primary Text
+                  p.text-primary
+                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                .tim-typo
+                  span.tim-note Info Text
+                  p.text-info
+                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                .tim-typo
+                  span.tim-note Success Text
+                  p.text-success
+                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                .tim-typo
+                  span.tim-note Warning Text
+                  p.text-warning
+                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                .tim-typo
+                  span.tim-note Danger Text
+                  p.text-danger
+                    | I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
+                .tim-typo
+                  h2
+                    span.tim-note Small Tag
+                    |  Header with small subtitle
+                    br
+                    |
+                    small Use &quot;small&quot; tag for the headers
+            .space-50
+            #images
+              .title
+                h2 Images
+              br
+              .row
+                .col-sm-2
+                  h4 Rounded Image
+                  |
+                  img.img-rounded.img-responsive(src='img/avatar.jpg', alt='Rounded Image')
+                .col-sm-2.col-sm-offset-1
+                  h4 Circle Image
+                  |
+                  img.img-circle.img-responsive(src='img/avatar.jpg', alt='Circle Image')
+                .col-sm-2.col-sm-offset-1
+                  h4 Rounded Raised
+                  |
+                  img.img-rounded.img-responsive.img-raised(src='img/avatar.jpg', alt='Raised Image')
+                .col-sm-2.col-sm-offset-1
+                  h4 Circle Raised
+                  |
+                  img.img-circle.img-raised.img-responsive(src='img/avatar.jpg', alt='Thumbnail Image')
+              .row
+        #javascriptComponents.section
+          .container
+            .title
+              h2 Javascript components
+            #modals.row
+              .col-md-6
+                .title
+                  h3 Modal
+                |
+                button.btn.btn-primary(data-toggle='modal', data-target='#myModal')  Launch demo modal
+              .col-md-6
+                .title
+                  h3 Popovers
+                |
+                button.btn.btn-default(type='button', data-toggle='popover', data-placement='left', title='Popover on left', data-content='Here will be some very useful information about his popover.<br> Here will be some very useful information about his popover.', data-container='body') On left
+                |
+                button.btn.btn-default(type='button', data-toggle='popover', data-placement='top', title='Popover on top', data-content='Here will be some very useful information about his popover.', data-container='body') On top
+                |
+                button.btn.btn-default(type='button', data-toggle='popover', data-placement='bottom', title='Popover on bottom', data-content='Here will be some very useful information about his popover.', data-container='body') On bottom
+                |
+                button.btn.btn-default(type='button', data-toggle='popover', data-placement='right', title='Popover on right', data-content='Here will be some very useful information about his popover.', data-container='body') On right
+              br
+              br
+              .col-md-6
+                .title
+                  h3 Datepicker
+                .row
+                  .col-md-6
+                    .form-group.label-static
+                      label.control-label Datepicker
+                      |
+                      input.datepicker.form-control(type='text', value='03/12/2016')
+              .col-md-6
+                .title
+                  h3 Tooltips
+                |
+                button.btn.btn-default.btn-tooltip(type='button', data-toggle='tooltip', data-placement='left', title='Tooltip on left', data-container='body') On left
+                |
+                button.btn.btn-default.btn-tooltip(type='button', data-toggle='tooltip', data-placement='top', title='Tooltip on top', data-container='body') On top
+                |
+                button.btn.btn-default.btn-tooltip(type='button', data-toggle='tooltip', data-placement='bottom', title='Tooltip on bottom', data-container='body') On bottom
+                |
+                button.btn.btn-default.btn-tooltip(type='button', data-toggle='tooltip', data-placement='right', title='Tooltip on right', data-container='body') On right
+                .clearfix
+                br
+                br
+              .title
+                h3 Carousel
+        #carousel.section
+          .container
+            .row
+              .col-md-8.col-md-offset-2
+                .card.card-raised.card-carousel
+                  #carousel-example-generic.carousel.slide(data-ride='carousel')
+                    .carousel.slide(data-ride='carousel')
+                      ol.carousel-indicators
+                        li.active(data-target='#carousel-example-generic', data-slide-to='0')
+                        li(data-target='#carousel-example-generic', data-slide-to='1')
+                        li(data-target='#carousel-example-generic', data-slide-to='2')
+                      .carousel-inner
+                        .item.active
+                          img(src='img/bg2.jpeg', alt='Awesome Image')
+                          .carousel-caption
+                            h4
+                              i.material-icons location_on
+                              |  Yellowstone National Park, United States
+                        .item
+                          img(src='img/bg3.jpeg', alt='Awesome Image')
+                          .carousel-caption
+                            h4
+                              i.material-icons location_on
+                              |  Somewhere Beyond, United States
+                        .item
+                          img(src='img/bg4.jpeg', alt='Awesome Image')
+                          .carousel-caption
+                            h4
+                              i.material-icons location_on
+                              |  Yellowstone National Park, United States
+                      |
+                      a.left.carousel-control(href='#carousel-example-generic', data-slide='prev')
+                        i.material-icons keyboard_arrow_left
+                      |
+                      a.right.carousel-control(href='#carousel-example-generic', data-slide='next')
+                        i.material-icons keyboard_arrow_right
+        .section
+          .container.text-center
+            .row
+              .col-md-8.col-md-offset-2.text-center
+                h2 Completed with examples
+                h4
+                  | The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you&apos;re good to go. More importantly, looking at them will give you a picture of what you can built with this powerful kit.
+        .section.section-full-screen.section-signup(style="background-image: url('img/city.jpg'); background-size: cover; background-position: top center; min-height: 700px;")
+          .container
+            .row
+              .col-md-4.col-md-offset-4
+                .card.card-signup
+                  form.form(method='', action='')
+                    .header.header-primary.text-center
+                      h4 Sign Up
+                      .social-line
+                        a.btn.btn-simple.btn-just-icon(href='#pablo')
+                          i.fa.fa-facebook-square
+                        a.btn.btn-simple.btn-just-icon(href='#pablo')
+                          i.fa.fa-twitter
+                        a.btn.btn-simple.btn-just-icon(href='#pablo')
+                          i.fa.fa-google-plus
+                    p.text-divider Or Be Classical
+                    .content
+                      .input-group
+                        span.input-group-addon
+                          i.material-icons face
+                        |
+                        input.form-control(type='text', placeholder='First Name...')
+                      .input-group
+                        span.input-group-addon
+                          i.material-icons email
+                        |
+                        input.form-control(type='text', placeholder='Email...')
+                      .input-group
+                        span.input-group-addon
+                          i.material-icons lock_outline
+                        |
+                        input.form-control(type='password', placeholder='Password...')
+                    .footer.text-center
+                      a.btn.btn-simple.btn-primary.btn-lg(href='#pablo') Get Started
+        .col-md-12.text-center
+          a.btn.btn-simple.btn-primary.btn-lg(href='examples/signup-page.html', target='_blank') View Signup Page
+        .space-50
+        .section.section-examples
+          .container-fluid.text-center
+            .row
+              .col-md-6
+                a(href='examples/landing-page.html', target='_blank')
+                  img.img-rounded.img-raised.img-responsive(src='img/landing.jpg', alt='Rounded Image')
+                  |
+                  button.btn.btn-simple.btn-primary.btn-lg View Landing Page
+              .col-md-6
+                a(href='examples/profile-page.html', target='_blank')
+                  img.img-rounded.img-raised.img-responsive(src='img/profile.jpg', alt='Rounded Image')
+                  |
+                  button.btn.btn-simple.btn-primary.btn-lg View Profile Page
+        .section.section-download
+          .container
+            .row.text-center
+              .col-md-8.col-md-offset-2
+                h2 Do you love this UI Kit?
+                h4
+                  | Cause if you do, it can be yours for FREE. Hit the button below to navigate to Creative Tim where you can find the kit. Start a new project or give an old Bootstrap project a new look!
+              .col-xs-8.col-xs-offset-2.col-sm-4.col-sm-offset-4
+                a.btn.btn-primary.btn-lg(href='http://www.creative-tim.com/product/material-kit')
+                  i.material-icons cloud_download
+                  |  Free Download
+            br
+            br
+            .row.text-center
+              .col-md-8.col-md-offset-2
+                h2 Want more?
+                h4
+                  | We&apos;ve just launched
+                  a(href='http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie', target='_blank') Material Kit PRO
+                  | . It has a huge number of components, sections and example pages. Start Your Development With A Badass Bootstrap UI Kit inspired by Material Design.
+              .col-xs-8.col-xs-offset-2.col-sm-4.col-sm-offset-4
+                a.btn.btn-upgrade.btn-lg(href='http://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-freebie', target='_blank')
+                  i.material-icons unarchive
+                  |  Upgrade to PRO
+            .row.sharing-area.text-center
+              h3 Thank you for supporting us!
+              a.btn.btn-twitter(href='#')
+                i.fa.fa-twitter
+                |  Tweet
+              a.btn.btn-facebook(href='#')
+                i.fa.fa-facebook-square
+                |  Share
+              a.btn.btn-google-plus(href='#')
+                i.fa.fa-google-plus
+                |  Share
+              a.btn.btn-github(href='#')
+                i.fa.fa-github
+                |  Star
+      footer.footer
+        .container
+          nav.pull-left
+            ul
+              li
+                a(href='https://github.com/smddzcy/hackathon-techsummit-2017') GitHub Project
+          .copyright.pull-right
+            | &copy; 2017, made with
+            i.material-icons favorite
+            |  by Wow Team for the TechSummit Hackathon.
+    #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true')
+              i.material-icons clear
+            h4.modal-title Modal title
+          .modal-body
+            p
+              | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+          .modal-footer
+            button.btn.btn-default.btn-simple(type='button') Nice Button
+            |
+            button.btn.btn-danger.btn-simple(type='button', data-dismiss='modal') Close
+  script(src='assets/js/jquery.min.js', type='text/javascript')
+  script(src='assets/js/bootstrap.min.js', type='text/javascript')
+  script(src='assets/js/material.min.js')
+  script(src='assets/js/nouislider.min.js', type='text/javascript')
+  script(src='assets/js/bootstrap-datepicker.js', type='text/javascript')
+  script(src='assets/js/material-kit.js', type='text/javascript')
+  script(type='text/javascript').
+    $().ready(function(){
+    // the body of this function is in assets/material-kit.js
+    materialKit.initSliders();
+    window_width = $(window).width();
+    if (window_width >= 992){
+    big_image = $('.wrapper > .header');
+    $(window).on('scroll', materialKitDemo.checkScrollForParallax);
+    }
+    });

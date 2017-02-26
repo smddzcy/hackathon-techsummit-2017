@@ -1,6 +1,27 @@
-footer
-  .container.text-center
-    p.pull-left © 2017 Wow Team.
-    ul.pull-right.list-inline
-      li
-        a(href='https://github.com/sahat/hackathon-starter') GitHub Project
+footer.footer
+  .container
+    nav.pull-left
+      ul
+        li
+          a(href='https://github.com/smddzcy/hackathon-techsummit-2017') GitHub Project
+    .copyright.pull-right
+      | &copy; 2017, made with&nbsp;
+      i.material-icons favorite
+      |  by Wow Team at TechSummit Hackathon.
+
+#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+          i.material-icons clear
+        h4.modal-title Modal title
+      .modal-body
+        p
+          | Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+      .modal-footer
+        button.btn.btn-default.btn-simple(type='button') Nice Button
+        |
+        button.btn.btn-danger.btn-simple(type='button', data-dismiss='modal') Close
+
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqDLTIyDizuX7HzyjhVUK0UuVnbjC64cw&libraries=visualization")
