@@ -22,4 +22,3 @@ estimator.fit(input_fn=input_fn, steps=1000)
 
 print estimator.evaluate(input_fn=input_fn)
 
-print estimator.predict(x=123)
