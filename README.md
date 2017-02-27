@@ -1,4 +1,4 @@
-# Wow Panic - TechSummit 2017 IBM Hackathon (First place :crown:)
+# Wow Panic - TechSummit 2017 IBM Hackathon (1st Place :crown:)
 
 _Wow Panic_ is a smart bracelet that shows you the probability of being harassed in a neighborhood, and sends a message to your loved ones and the police when pressed. 
 
